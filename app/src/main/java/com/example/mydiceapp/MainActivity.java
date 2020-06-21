@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
               Log.i("MyDiceApp", "btnRoll is tapped now!");
+
+              Random rndObject = new Random();
+              int myRandomNumber = rndObject.nextInt(8);
+              Log.i("MyDiceApp", "The generated random number is " + myRandomNumber + "");
             }
         });
 
